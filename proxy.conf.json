@@ -1,0 +1,8 @@
+{
+  "/raw": {
+    "target": "http://jsteam.sibedge.com",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

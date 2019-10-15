@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss",
               "node_modules/normalize.css/normalize.css"
             ],
@@ -68,7 +69,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "sibedge-test-task:build"
+            "browserTarget": "sibedge-test-task:build",
+            "proxyConfig": "proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -94,6 +96,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss",
               "node_modules/normalize.css/normalize.css"
             ],
@@ -126,6 +129,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "sibedge-test-task"
 }
