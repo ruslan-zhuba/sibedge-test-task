@@ -1,0 +1,24 @@
+<mat-form-field>
+  <mat-label>{{ label }}</mat-label>
+  <input
+    matInput
+    placeholder="Choose a date"
+    [satDatepicker]="picker"
+    [(ngModel)]="value"
+  />
+  <sat-datepicker #picker [rangeMode]="true" (closed)="onClose()"></sat-datepicker>
+  <sat-datepicker-toggle
+    matSuffix
+    [for]="picker"
+  ></sat-datepicker-toggle>
+  <button
+    mat-button
+    *ngIf="value"
+    matSuffix
+    mat-icon-button
+    aria-label="Clear"
+    (click)="onClear()"
+  >
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-form-field>

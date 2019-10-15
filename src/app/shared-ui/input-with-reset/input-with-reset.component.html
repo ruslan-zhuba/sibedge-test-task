@@ -1,0 +1,19 @@
+<mat-form-field>
+  <mat-label>{{ label }}</mat-label>
+  <input
+    matInput
+    [placeholder]="placeholder"
+    [(ngModel)]="value"
+    (keyup)="change$.next($event.target.value)"
+  />
+  <button
+    mat-button
+    *ngIf="isPristine$ | async"
+    matSuffix
+    mat-icon-button
+    aria-label="Clear"
+    (click)="onClear()"
+  >
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-form-field>
