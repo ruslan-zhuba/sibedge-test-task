@@ -1,6 +1,6 @@
 export interface User {
   cell: string;
-  dob: string;
+  dob: Date;
   email: string;
   gender: Gender;
   id: UserId;

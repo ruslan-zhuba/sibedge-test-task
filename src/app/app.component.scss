@@ -7,8 +7,9 @@
   left: calc(50vw - 50px);
 }
 
-app-users {
+.content {
   display: none;
+  padding: 10px;
 }
 
 .loader[loaded] {
@@ -17,7 +18,7 @@ app-users {
   animation-timing-function: ease;
 }
 
-app-users[loaded] {
+.content[loaded] {
   display: block;
   animation: hiding 1s 1;
   animation-direction: reverse;

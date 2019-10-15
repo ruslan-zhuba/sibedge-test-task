@@ -1,5 +1,5 @@
+<mat-toolbar color="primary">SibEDGE test task</mat-toolbar>
 <div class="loader" [attr.loaded]="userModuleLoaded"></div>
-<app-users
-  [attr.loaded]="userModuleLoaded"
-  (loaded)="onLoaded()"
-></app-users>
+<div class="content" [attr.loaded]="userModuleLoaded" >
+  <app-users (loaded)="onLoaded()"></app-users>
+</div>
