@@ -1,0 +1,5 @@
+<div class="loader" [attr.loaded]="userModuleLoaded"></div>
+<app-users
+  [attr.loaded]="userModuleLoaded"
+  (loaded)="onLoaded()"
+></app-users>

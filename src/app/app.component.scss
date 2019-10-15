@@ -1,0 +1,35 @@
+.loader {
+  background-image: url("/assets/images/loader.svg");
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  top: calc(50vh - 50px);
+  left: calc(50vw - 50px);
+}
+
+app-users {
+  display: none;
+}
+
+.loader[loaded] {
+  animation: hiding 0.5s 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+app-users[loaded] {
+  display: block;
+  animation: hiding 1s 1;
+  animation-direction: reverse;
+  animation-timing-function: ease;
+}
+
+@keyframes hiding {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
