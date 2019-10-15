@@ -13,7 +13,7 @@ import { MatPaginator, MatTableDataSource } from '@angular/material';
 import { UserFilter } from './user-filter.interface';
 import { SatDatepickerRangeValue } from 'saturn-datepicker';
 import * as R from 'ramda';
-import { pathLteDate, pathGteDate, startsWithCurryFn } from '../utils';
+import { pathLte, pathGte, pathStartsWith } from '../utils';
 
 @Component({
   selector: 'app-users',
@@ -39,13 +39,13 @@ export class UsersComponent implements OnDestroy {
     map(([users, filters]) =>
       R.filter(
         R.allPass([
-          startsWithCurryFn(['name', 'last'], filters.lastName),
-          startsWithCurryFn(['location', 'city'], filters.city),
-          startsWithCurryFn(['phone'], filters.phone),
+          pathStartsWith(['name', 'last'], filters.lastName),
+          pathStartsWith(['location', 'city'], filters.city),
+          pathStartsWith(['phone'], filters.phone),
           ...(filters.birthday
             ? [
-                pathGteDate(['dob'], filters.birthday.begin),
-                pathLteDate(['dob'], filters.birthday.end)
+                pathGte(['dob'], filters.birthday.begin),
+                pathLte(['dob'], filters.birthday.end)
               ]
             : [])
         ]),
