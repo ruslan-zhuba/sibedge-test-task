@@ -1,0 +1,12 @@
+table {
+  width: 100%;
+}
+
+$date-column: 160px;
+
+.mat-column-dob {
+  max-width: $date-column;
+  & mat-form-field {
+    max-width: $date-column;
+  }
+}
