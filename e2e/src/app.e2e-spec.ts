@@ -8,9 +8,9 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display table', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('sibedge-test-task app is running!');
+    expect(page.getTitleText()).toEqual('SibEDGE test task');
   });
 
   afterEach(async () => {
