@@ -1,20 +1,20 @@
 export interface User {
-  cell: string;
+  cell?: string;
   dob: Date;
   email: string;
-  gender: Gender;
-  id: UserId;
+  gender?: Gender;
+  id?: UserId;
   location: Location;
-  login: LoginCredentials;
+  login?: LoginCredentials;
   name: {
     title: string;
     first: string;
     last: string;
   };
-  nat: string;
+  nat?: string;
   phone: string;
-  picture: Avatars;
-  registered: DateString;
+  picture?: Avatars;
+  registered?: DateString;
 }
 
 export type DateString = string;
